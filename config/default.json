@@ -1,0 +1,5 @@
+{
+    "PORT": 4000,
+    "SECRET_KEY": "secret_token2096",
+    "AVATAR_SIZE": 5
+}
