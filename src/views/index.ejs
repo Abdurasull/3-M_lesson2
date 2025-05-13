@@ -32,7 +32,7 @@
                             <i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>
                         </div>
                     </div>
-
+                    <h2 style="text-align: center;" class="heading-avatar-name"></h2>
                     <div class="row searchBox">
                         <div class="col-sm-12 searchBox-inner">
                             <div class="form-group has-feedback">
@@ -42,27 +42,9 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- Sidebar Template -->
                     <div class="row sideBar">                        
-                        <div class="row sideBar-body">
-                            <div class="col-sm-3 col-xs-3 sideBar-avatar">
-                                <div class="avatar-icon">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar4.png">
-                                </div>
-                            </div>
-                            <div class="col-sm-9 col-xs-9 sideBar-main">
-                                <div class="row">
-                                    <div class="col-sm-8 col-xs-8 sideBar-name">
-                                        <span class="name-meta">John Doe
-                                        </span>
-                                    </div>
-                                    <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
-                                        <span class="time-meta pull-right">18:18
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -81,42 +63,22 @@
                     <div class="row composeBox">
                         <div class="col-sm-12 composeBox-inner">
                             <div class="form-group has-feedback">
-                                <input id="composeText" type="text" class="form-control" name="searchText"
-                                    placeholder="Search People">
-                                <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                <button class="btn-exit" >Exit</button>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="row compose-sideBar">
-                        <div class="row sideBar-body">
-                            <div class="col-sm-3 col-xs-3 sideBar-avatar">
-                                <div class="avatar-icon">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png">
-                                </div>
-                            </div>
-                            <div class="col-sm-9 col-xs-9 sideBar-main">
-                                <div class="row">
-                                    <div class="col-sm-8 col-xs-8 sideBar-name">
-                                        <span class="name-meta">John Doe
-                                        </span>
-                                    </div>
-                                    <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
-                                        <span class="time-meta pull-right">18:18
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-8 conversation">
-                <div class="row heading">
+            <div class="col-sm-8 conversation" hidden>
+                <div class="row heading" >
                     <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
                         <div class="heading-avatar-icon">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                            <img class="js-chat-image" src="https://bootdey.com/img/Content/avatar/avatar6.png">
                         </div>
                     </div>
                     <div class="col-sm-8 col-xs-7 heading-name">
@@ -128,7 +90,7 @@
                         <i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>
                     </div>
                 </div>
-
+                
                 <div class="row message" id="conversation">
                     <div class="row message-previous">
                         <div class="col-sm-12 previous">
@@ -137,7 +99,7 @@
                             </a>
                         </div>
                     </div>
-
+                
                     <div class="row message-body">
                         <div class="col-sm-12 message-main-receiver">
                             <div class="receiver">
@@ -150,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-
+                
                     <div class="row message-body">
                         <div class="col-sm-12 message-main-sender">
                             <div class="sender">
@@ -164,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="row reply">
                     <div class="col-sm-1 col-xs-1 reply-emojis">
                         <i class="fa fa-smile-o fa-2x"></i>
@@ -175,23 +137,46 @@
                     <div class="col-sm-1 col-xs-1 reply-recording">
                         <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
                     </div>
+
                     <div class="col-sm-1 col-xs-1 reply-send">
                         <i class="fa fa-send fa-2x" aria-hidden="true"></i>
-                    </div>
+                    </div>  
                 </div>
             </div>
         </div>
     </div>
+    <!-- Sidebar Template -->
+    <template class="sideBar-template">
+        <div class="row sideBar-body">
+            <div class="col-sm-3 col-xs-3 sideBar-avatar">
+                <div class="avatar-icon">
+                    <img class="js-own-image" src="https://bootdey.com/img/Content/avatar/avatar4.png">
+                </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 sideBar-main">
+                <div class="row">
+                    <div class="col-sm-8 col-xs-8 sideBar-name">
+                        <span class="name-meta">John Doe
+                        </span>
+                    </div>
+                    <div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+                        <span class="time-meta pull-right">18:18
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
 
 
-
-    <style type="text/css">
-        
-    </style>
-    <script src="js/index.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/base.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/socket.js"></script>
     <script type="text/javascript">
         $(function () {
-            $(".heading-compose").click(function () {
+            $(".heading-dot").click(function () {
                 $(".side-two").css({
                     "left": "0"
                 });

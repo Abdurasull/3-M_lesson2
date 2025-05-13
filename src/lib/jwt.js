@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 const config = require("config");
-const { globalError } = require('../utils/error');
+const { globalError, ClientError } = require('../utils/error');
 const serverConfig = require('../config');
 const generateToken = (user) => {
     const payload = {
@@ -15,10 +15,19 @@ const generateToken = (user) => {
     return token;
 };
 const verifyToken = (token) => {
-    try{
-        const decoded = jwt.verify(token, config.get("SECRET_KEY"));
-        return decoded;
-    }catch(err){
+    try{        
+        
+        const decoded = jwt.verify(token, serverConfig.JWT_KEY, (err, decoded) => {
+            if (err) {
+              throw new ClientError("Token noto‘g‘ri yoki muddati o‘tgan", 401);
+            } 
+            
+            
+            return decoded;
+          });
+          return decoded;
+        
+    }catch(err){        
         globalError(err, res);
     }
 }

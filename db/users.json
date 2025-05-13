@@ -7,5 +7,41 @@
         "avatar": "/images/1747028755774muslim5.jpg",
         "createdAt": "2025:05:12 10:45",
         "updatedAt": null
+    },
+    {
+        "id": 2,
+        "name": "Abdurasul",
+        "email": "abdurasul@gmail.com",
+        "password": "d2d02ea74de2c9fab1d802db969c18d409a8663a9697977bb1c98ccdd9de4372",
+        "avatar": "/images/1747111815831image3.jpg",
+        "createdAt": "2025:05:13 09:50",
+        "updatedAt": null
+    },
+    {
+        "id": 3,
+        "name": "Qoravoy",
+        "email": "qoravoy@gmail.com",
+        "password": "d2d02ea74de2c9fab1d802db969c18d409a8663a9697977bb1c98ccdd9de4372",
+        "avatar": "/images/1747145614292image4.avif",
+        "createdAt": "2025:05:13 19:13",
+        "updatedAt": null
+    },
+    {
+        "id": 4,
+        "name": "Malika",
+        "email": "Malika@gmail.com",
+        "password": "d2d02ea74de2c9fab1d802db969c18d409a8663a9697977bb1c98ccdd9de4372",
+        "avatar": "/images/1747145680890image11.jpeg",
+        "createdAt": "2025:05:13 19:14",
+        "updatedAt": null
+    },
+    {
+        "id": 5,
+        "name": "Akbar",
+        "email": "Akbar@gmail.com",
+        "password": "d2d02ea74de2c9fab1d802db969c18d409a8663a9697977bb1c98ccdd9de4372",
+        "avatar": "/images/1747156831139688537140963c571b7f486cee401b8d7--gala-arab-swag.jpg",
+        "createdAt": "2025:05:13 22:20",
+        "updatedAt": null
     }
 ]

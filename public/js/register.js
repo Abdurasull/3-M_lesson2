@@ -20,7 +20,6 @@ elForm.addEventListener("submit", async function (evt) {
     console.log(result);
     
     if(result.status == 201) {
-        alert(result.message);
         window.location.href = "/login";
     } else {
         errorMessage.textContent = result;

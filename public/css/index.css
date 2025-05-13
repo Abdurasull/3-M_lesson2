@@ -473,8 +473,26 @@ body {
     text-indent: 5px;
     box-shadow: none;
 }
+.name-meta{
+    cursor: pointer;
+}
+.btn-exit{
+    padding: 5px !important;
+    margin: 0 !important;
+    text-align: center;
+    color: #fff;
+    background-color: #009688;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 700px) {
+    .name-meta {
+            cursor: pointer;   
+        }
     .app {
         top: 0;
         height: 100%;

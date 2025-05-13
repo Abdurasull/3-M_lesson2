@@ -19,7 +19,6 @@ elForm.addEventListener("submit", async (evt) => {
     if(result.status == 200) {
         window.localStorage.setItem("token", result.data.token);
         window.localStorage.setItem("userInfo", JSON.stringify(result.data.userInfo));
-        alert(result.message);
         window.location.href = "/";
     } else {
         errorMessage.textContent = result;
