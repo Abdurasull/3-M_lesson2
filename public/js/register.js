@@ -2,7 +2,7 @@ const elForm = document.querySelector(".js-form");
 
 
 async function getData(data) {
-    const response = await fetch("http://localhost:4000/api/auth/register",
+    const response = await fetch("https://three-m-lesson2.onrender.com/api/auth/register",
         {
             method: "POST",
        

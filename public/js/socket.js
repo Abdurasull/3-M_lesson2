@@ -4,7 +4,7 @@ const connectSocket = () => {
         window.location.href = "/login";
         return null;
     };
-    const socket = io("http://localhost:4000", {
+    const socket = io("https://three-m-lesson2.onrender.com", {
         auth: {
             token: `Bearer ` + token
         }

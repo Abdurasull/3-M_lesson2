@@ -16,7 +16,11 @@ const { verifyToken } = require('./lib/jwt');
 
 const app = express();
 const server = createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: "*"
+  }
+});
 
 app.use(express.static(path.join(process.cwd(), "public")));
 app.use(express.static(path.join(process.cwd(), "uploads")));
@@ -24,7 +28,9 @@ app.use(express.json());
 app.use(fileUpload());
 app.set('view engine', 'ejs');
 app.set('views', path.join(process.cwd(), "src", 'views'));
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 app.use(model);
 
 app.use("/api", mainRouter);

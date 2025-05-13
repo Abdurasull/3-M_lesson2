@@ -2,7 +2,7 @@ const elForm = document.querySelector(".form");
 
 
 async function getData(data){
-    const res = await fetch("http://localhost:4000/api/auth/login", {
+    const res = await fetch("https://three-m-lesson2.onrender.com/api/auth/login", {
         method: "POST",
         body: data
     });

@@ -24,7 +24,7 @@ function AllUsers(data){
 };
     
 const getUserInfo = async () =>{
-    const res = await fetch("http://localhost:4000/api/get/user", {
+    const res = await fetch("https://three-m-lesson2.onrender.com/api/get/user", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
